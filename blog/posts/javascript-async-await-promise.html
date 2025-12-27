@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript bất đồng bộ: Callback, Promise, async/await (nhớ lâu) | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="Giải thích async trong JavaScript: callback, Promise và async/await, ví dụ fetch API và lỗi thường gặp." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">27/12/2025 · Nguyễn Kha</div>
+      <h1>JavaScript bất đồng bộ: Callback, Promise, async/await (nhớ lâu)</h1>
+      <p>
+        JavaScript chạy nhiều việc theo “bất đồng bộ” (async) như gọi API, đọc file, setTimeout…
+        Nếu bạn từng bị lỗi <code>undefined</code> vì dữ liệu chưa về kịp, thì bài này dành cho bạn.
+      </p>
+
+      <h2>1) Callback (cách cũ)</h2>
+      <pre class="code"><code>setTimeout(() => {
+  console.log("Xong sau 1s");
+}, 1000);
+</code></pre>
+
+      <h2>2) Promise</h2>
+      <pre class="code"><code>fetch("https://example.com")
+  .then(res => res.text())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+</code></pre>
+
+      <h2>3) async/await (dễ đọc nhất)</h2>
+      <pre class="code"><code>async function load() {
+  try {
+    const res = await fetch("https://example.com");
+    const data = await res.text();
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+}
+</code></pre>
+
+      <h2>4) Lỗi hay gặp</h2>
+      <ul class="list">
+        <li>Quên <code>await</code> → biến nhận về Promise chứ không phải data.</li>
+        <li>Quên <code>try/catch</code> → lỗi bị “nuốt” khó debug.</li>
+        <li>Không hiểu thứ tự chạy (event loop) → log ra không đúng như nghĩ.</li>
+      </ul>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

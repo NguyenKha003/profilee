@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Java cơ bản: kiểu dữ liệu, biến và hằng số (kèm ví dụ) | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="Tóm tắt kiểu dữ liệu Java, cách khai báo biến, hằng số final và lỗi thường gặp của sinh viên." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">27/12/2025 · Nguyễn Kha</div>
+      <h1>Java cơ bản: kiểu dữ liệu, biến và hằng số (kèm ví dụ)</h1>
+      <p>
+        Đây là phần nền tảng mà đi làm bài tập Java (và làm đồ án) bạn sẽ gặp hoài: kiểu dữ liệu, biến và hằng số.
+        Nắm chắc 3 thứ này sẽ giúp bạn tránh nhiều lỗi “ngớ ngẩn” khi code.
+      </p>
+
+      <h2>1) Kiểu dữ liệu nguyên thủy (primitive)</h2>
+      <ul class="list">
+        <li><code>int</code>, <code>long</code>: số nguyên</li>
+        <li><code>double</code>, <code>float</code>: số thực</li>
+        <li><code>boolean</code>: đúng/sai</li>
+        <li><code>char</code>: ký tự</li>
+      </ul>
+
+      <h2>2) Kiểu tham chiếu (reference)</h2>
+      <p>
+        Ví dụ phổ biến: <code>String</code>, <code>ArrayList</code>, object do bạn tự tạo.
+        Khác với primitive, reference có thể mang giá trị <code>null</code>.
+      </p>
+
+      <h2>3) Khai báo biến</h2>
+      <pre class="code"><code>int age = 20;
+double gpa = 3.2;
+String name = "Nguyễn Kha";
+</code></pre>
+
+      <h2>4) Hằng số với <code>final</code></h2>
+      <pre class="code"><code>final double PI = 3.14159;
+// PI = 3.14; // lỗi: không được gán lại
+</code></pre>
+      <p>
+        Mẹo: hằng số thường đặt tên IN HOA để dễ nhận biết.
+      </p>
+
+      <h2>5) Lỗi sinh viên hay gặp</h2>
+      <ul class="list">
+        <li>Nhầm <code>String</code> so sánh bằng <code>==</code> thay vì <code>equals()</code>.</li>
+        <li>Quên ép kiểu khi chia số nguyên: <code>5/2</code> ra <code>2</code> (không phải <code>2.5</code>).</li>
+        <li>Gặp <code>NullPointerException</code> vì gọi method trên biến đang <code>null</code>.</li>
+      </ul>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

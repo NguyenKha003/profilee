@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript DOM & Event: thao tác HTML và bắt sự kiện (ví dụ dễ hiểu) | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="Học DOM và event trong JavaScript: querySelector, addEventListener, preventDefault, ví dụ mini." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">27/12/2025 · Nguyễn Kha</div>
+      <h1>JavaScript DOM & Event: thao tác HTML và bắt sự kiện (ví dụ dễ hiểu)</h1>
+      <p>
+        Làm web mà không biết DOM và event thì giống như có HTML/CSS nhưng không “điều khiển” được gì.
+        Bài này tóm tắt các thao tác hay dùng nhất.
+      </p>
+
+      <h2>1) DOM là gì?</h2>
+      <p>
+        DOM (Document Object Model) là cách trình duyệt biểu diễn HTML thành cây đối tượng. Bạn dùng JS để chọn phần tử và thay đổi nội dung/style.
+      </p>
+
+      <h2>2) Chọn phần tử</h2>
+      <pre class="code"><code>const title = document.querySelector("h1");
+const btn = document.querySelector("#btnSave");
+const items = document.querySelectorAll(".item");
+</code></pre>
+
+      <h2>3) Bắt sự kiện với addEventListener</h2>
+      <pre class="code"><code>btn.addEventListener("click", () => {
+  title.textContent = "Đã bấm nút!";
+});
+</code></pre>
+
+      <h2>4) Lỗi hay gặp</h2>
+      <ul class="list">
+        <li>Script chạy trước khi HTML render xong → đặt script cuối body hoặc dùng <code>defer</code>.</li>
+        <li><code>querySelector</code> trả về <code>null</code> vì selector sai.</li>
+        <li>Nhầm <code>onclick</code> inline với <code>addEventListener</code> (nên ưu tiên addEventListener).</li>
+      </ul>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Java vs JavaScript: giống và khác nhau (dành cho sinh viên mới học) | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="So sánh Java và JavaScript: chạy ở đâu, kiểu dữ liệu, OOP, async, khi nào nên học cái nào." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">27/12/2025 · Nguyễn Kha</div>
+      <h1>Java vs JavaScript: giống và khác nhau (dành cho sinh viên mới học)</h1>
+      <p>
+        Nhiều bạn mới học hay nhầm: <strong>Java</strong> và <strong>JavaScript</strong> chỉ giống nhau ở chữ “Java”.
+        Còn lại là 2 ngôn ngữ khác nhau, dùng cho mục đích khác nhau.
+      </p>
+
+      <h2>1) Chạy ở đâu?</h2>
+      <ul class="list">
+        <li><strong>Java</strong>: chạy trên JVM (Java Virtual Machine). Hay dùng làm backend (Spring), app Android (trước đây), desktop app.</li>
+        <li><strong>JavaScript</strong>: chạy trên trình duyệt (Chrome/Edge) để làm web frontend. Ngoài ra chạy được ở server với Node.js.</li>
+      </ul>
+
+      <h2>2) Kiểu dữ liệu: static vs dynamic</h2>
+      <ul class="list">
+        <li><strong>Java</strong>: kiểu tĩnh (static typing). Khai báo kiểu rõ ràng: <code>int</code>, <code>String</code>, <code>List&lt;User&gt;</code>…</li>
+        <li><strong>JavaScript</strong>: kiểu động (dynamic typing). Biến có thể đổi kiểu trong runtime.</li>
+      </ul>
+
+      <h2>3) OOP: cả hai đều làm được, nhưng “chất” khác nhau</h2>
+      <ul class="list">
+        <li><strong>Java</strong>: OOP rất “chuẩn sách giáo khoa”: class, interface, kế thừa, đóng gói.</li>
+        <li><strong>JavaScript</strong>: có class syntax (ES6) nhưng bản chất là prototype-based.</li>
+      </ul>
+
+      <h2>4) Bất đồng bộ (async): JS gặp nhiều hơn</h2>
+      <p>
+        JavaScript web hay gặp gọi API, xử lý event nên async là “cơm bữa” (Promise, async/await).
+        Java cũng có async, nhưng thường bạn sẽ gặp trong framework/backend theo cách khác.
+      </p>
+
+      <h2>5) Nên học cái nào trước?</h2>
+      <ul class="list">
+        <li>Nếu bạn muốn đi <strong>Web</strong>: học JavaScript trước (HTML/CSS/JS), sau đó học thêm backend (Java hoặc Node.js).</li>
+        <li>Nếu bạn muốn đi <strong>Backend/Enterprise</strong>: Java là lựa chọn rất ổn để rèn OOP + tư duy hệ thống.</li>
+        <li>Thực tế tốt nhất: <strong>học cả hai</strong> theo lộ trình, vì đồ án thường cần frontend + backend.</li>
+      </ul>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

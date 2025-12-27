@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Java Collections: ArrayList vs HashMap (khi nào dùng cái nào?) | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="Giải thích nhanh ArrayList và HashMap trong Java Collections, ví dụ CRUD nhỏ và lỗi thường gặp." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">27/12/2025 · Nguyễn Kha</div>
+      <h1>Java Collections: ArrayList vs HashMap (khi nào dùng cái nào?)</h1>
+      <p>
+        Khi làm bài tập Java hoặc làm đồ án CRUD, bạn sẽ gặp 2 cấu trúc rất hay dùng: <strong>ArrayList</strong> và <strong>HashMap</strong>.
+        Bài này giúp bạn phân biệt và chọn đúng cái cần dùng.
+      </p>
+
+      <h2>1) ArrayList: danh sách theo thứ tự</h2>
+      <ul class="list">
+        <li>Dữ liệu có thứ tự (index 0..n-1)</li>
+        <li>Duyệt danh sách rất trực quan</li>
+        <li>Tìm theo “id” thì phải tự loop</li>
+      </ul>
+      <pre class="code"><code>ArrayList<String> names = new ArrayList<>();
+names.add("Kha");
+names.add("An");
+</code></pre>
+
+      <h2>2) HashMap: tra cứu theo key</h2>
+      <ul class="list">
+        <li>Dùng cặp key-value</li>
+        <li>Tra cứu theo key nhanh</li>
+        <li>Hợp khi bạn có “id” rõ ràng</li>
+      </ul>
+      <pre class="code"><code>HashMap<String, Integer> score = new HashMap<>();
+score.put("kha", 10);
+int s = score.get("kha");
+</code></pre>
+
+      <h2>3) Khi nào dùng cái nào?</h2>
+      <ul class="list">
+        <li><strong>ArrayList</strong>: danh sách hiển thị (list sản phẩm, list sinh viên…), cần sắp xếp, cần duyệt tuần tự.</li>
+        <li><strong>HashMap</strong>: cần tra nhanh theo id/key (tìm user theo username, tìm sản phẩm theo mã).</li>
+      </ul>
+
+      <h2>4) Lỗi hay gặp</h2>
+      <ul class="list">
+        <li>Quên import: <code>import java.util.*;</code></li>
+        <li>Nhầm generic: <code>ArrayList&lt;int&gt;</code> (sai) phải dùng <code>ArrayList&lt;Integer&gt;</code>.</li>
+        <li><code>map.get(key)</code> trả về <code>null</code> nếu key không tồn tại.</li>
+      </ul>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
