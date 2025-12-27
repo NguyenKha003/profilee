@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tổng hợp lỗi thường gặp khi học lập trình (và cách sửa) | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="Tổng hợp lỗi thường gặp của sinh viên khi học lập trình theo phong cách gần gũi: học lan man, copy code, không debug, không luyện bài, và cách khắc phục." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">27/12/2025 · Nguyễn Kha</div>
+      <h1>Tổng hợp lỗi thường gặp khi học lập trình (và cách sửa)</h1>
+      <p>
+        Mình tổng hợp vài lỗi “kinh điển” mà sinh viên (và cả mình hồi trước) hay gặp khi học lập trình.
+        Không phải để chê đâu, mà để bạn <strong>đỡ mất thời gian</strong> và <strong>tiến nhanh hơn</strong>.
+      </p>
+
+      <h2>1) Học lan man: hôm nay Java, mai React, mốt lại nhảy qua AI</h2>
+      <p>
+        Cái này siêu phổ biến vì trên mạng có quá nhiều thứ hấp dẫn.
+        Nhưng học lan man thì bạn sẽ rơi vào trạng thái: <em>cái gì cũng biết sơ sơ, nhưng không làm ra được sản phẩm</em>.
+      </p>
+      <p><strong>Cách sửa:</strong></p>
+      <ul class="list">
+        <li>Chọn 1 hướng trong 4–6 tuần (VD: Java + OOP + SQL) rồi đi tới nơi tới chốn</li>
+        <li>Mỗi tuần có 1 sản phẩm nhỏ: CRUD mini, todo app, quản lý sinh viên…</li>
+      </ul>
+
+      <h2>2) Chỉ xem video mà không gõ code</h2>
+      <p>
+        Xem video cho “đã” thì dễ, nhưng kỹ năng lập trình là kỹ năng tay.
+        Không gõ thì não bạn không quen với lỗi, không quen với debug.
+      </p>
+      <p><strong>Cách sửa:</strong></p>
+      <ul class="list">
+        <li>Áp dụng quy tắc 70/30: 70% thời gian gõ code, 30% xem/đọc</li>
+        <li>Mỗi bài học phải có bài tập “tự biến tấu”: thêm tính năng, đổi dữ liệu, đổi giao diện</li>
+      </ul>
+
+      <h2>3) Copy code y chang, chạy được là mừng</h2>
+      <p>
+        Copy code không xấu nếu bạn dùng để tham khảo.
+        Nhưng nếu copy xong không hiểu, bạn sẽ “kẹt” ngay khi đổi yêu cầu.
+      </p>
+      <p><strong>Cách sửa:</strong></p>
+      <ul class="list">
+        <li>Sau khi copy, hãy tự trả lời: “biến này để làm gì?”, “hàm này nhận gì trả gì?”</li>
+        <li>Thử đổi 3 thứ: tên biến, dữ liệu input, và thêm 1 điều kiện</li>
+      </ul>
+
+      <h2>4) Sợ debug: lỗi là hoảng, rồi… hỏi bạn ngay</h2>
+      <p>
+        Debug là “kỹ năng sống còn”. Học lập trình mà không debug thì giống lái xe mà không nhìn gương.
+      </p>
+      <p><strong>Cách sửa:</strong></p>
+      <ul class="list">
+        <li>Đọc error từ trên xuống: <strong>lỗi chính</strong> thường nằm ở 1–2 dòng đầu</li>
+        <li>Dùng <code>console.log</code> / breakpoint để xem giá trị biến</li>
+        <li>Google theo mẫu: <code>"NullPointerException when calling ..."</code> kèm ngôn ngữ bạn dùng</li>
+      </ul>
+
+      <h2>5) Không luyện bài: hiểu rồi nhưng không làm</h2>
+      <p>
+        “Hiểu” khác hoàn toàn “làm được”. Bạn hiểu vòng lặp, nhưng tới bài tập vẫn bí vì chưa luyện.
+      </p>
+      <p><strong>Cách sửa:</strong></p>
+      <ul class="list">
+        <li>Mỗi ngày 30–60 phút làm bài: điều kiện, vòng lặp, mảng, string, function</li>
+        <li>Ghi lại 1 file “sổ tay lỗi” của riêng bạn: lỗi gì, sửa sao, tránh sao</li>
+      </ul>
+
+      <h2>6) Tập trung framework quá sớm, bỏ qua nền tảng</h2>
+      <p>
+        Framework giúp làm nhanh, nhưng nền tảng mới giúp bạn đi xa.
+        Nhiều bạn học React/ASP.NET xong vẫn “mù mờ” về OOP, cấu trúc dữ liệu, SQL.
+      </p>
+      <p><strong>Cách sửa:</strong></p>
+      <ul class="list">
+        <li>Ôn nền tảng song song: OOP, SQL, thuật toán cơ bản</li>
+        <li>Làm project nhỏ theo mô hình rõ ràng (VD: MVC, controller/service)</li>
+      </ul>
+
+      <h2>Kết: sửa 1 lỗi thôi là bạn đã hơn “hôm qua” rồi</h2>
+      <p>
+        Bạn không cần giỏi ngay.
+        Chỉ cần mỗi tuần tiến bộ 1 chút: debug tốt hơn, code sạch hơn, làm được 1 tính năng hoàn chỉnh hơn.
+      </p>
+      <p>
+        Nếu bạn muốn, bạn có thể nhắn mình biết bạn đang học ngôn ngữ nào (Java/C#/JS), mình sẽ gợi ý lộ trình và bài tập phù hợp.
+      </p>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

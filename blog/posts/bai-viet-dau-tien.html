@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lập trình hướng đối tượng (OOP) là gì? | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="Bài viết đầu tiên trên blog của Nguyễn Kha" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">27/12/2025 · Nguyễn Kha</div>
+      <h1>Lập trình hướng đối tượng (OOP) là gì?</h1>
+      <p>
+        <strong>OOP</strong> là nền tảng quan trọng trong Công nghệ Phần mềm, giúp chương trình dễ bảo trì và mở rộng.
+        Trong các môn Java và C#, mình áp dụng OOP để xây dựng các ứng dụng thực tế.
+      </p>
+
+      <h2>4 tính chất cơ bản</h2>
+      <ul class="list">
+        <li><strong>Đóng gói</strong>: gom dữ liệu &amp; hành vi vào một lớp</li>
+        <li><strong>Kế thừa</strong>: tái sử dụng và mở rộng lớp cha</li>
+        <li><strong>Đa hình</strong>: cùng một interface nhưng nhiều cách triển khai</li>
+        <li><strong>Trừu tượng</strong>: ẩn chi tiết, chỉ lộ ra những gì cần thiết</li>
+      </ul>
+
+      <h2>Một đoạn Java ví dụ</h2>
+      <pre class="code"><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello from Nguyen Kha!");
+    }
+}
+</code></pre>
+
+      <p>
+        Khi làm đồ án, OOP giúp mình tách lớp rõ ràng (model/service/controller), giảm lặp code và dễ mở rộng tính năng.
+      </p>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

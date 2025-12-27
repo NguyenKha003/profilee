@@ -1,0 +1,14 @@
+:root{
+  --elev: 0 14px 40px rgba(2,6,23,0.10);
+}
+
+@media (prefers-reduced-motion: no-preference){
+  body{
+    animation: pageIn 380ms cubic-bezier(.2,.8,.2,1) both;
+  }
+
+  @keyframes pageIn{
+    from{ opacity: 0; transform: translateY(10px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lần đầu làm đồ án ngành Công nghệ Phần mềm: mình đã học được gì? | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="Chia sẻ kinh nghiệm lần đầu làm đồ án CNPM: chọn đề tài, chia việc, làm báo cáo, demo, và những bài học thực tế cho sinh viên." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../portfolio.html">Portfolio</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">27/12/2025 · Nguyễn Kha</div>
+      <h1>Lần đầu làm đồ án ngành Công nghệ Phần mềm: mình đã học được gì?</h1>
+      <p>
+        Nếu bạn sắp làm đồ án lần đầu (nhất là làm nhóm), cảm giác thường là: <em>vừa háo hức vừa hoang mang</em>.
+        Mình cũng vậy. Bài này là chia sẻ kiểu “nhật ký đồ án” theo phong cách Dev.to/Viblo: thực tế, dễ áp dụng, và tránh mấy “cú trượt” phổ biến.
+      </p>
+
+      <h2>1) Chọn đề tài: đừng chọn cái “nghe ngầu”, hãy chọn cái “làm được”</h2>
+      <p>
+        Lần đầu, tụi mình hay bị hấp dẫn bởi đề tài hoành tráng: AI, blockchain, siêu app… nhưng thời gian thì có hạn.
+        Mình rút ra 1 nguyên tắc: <strong>đề tài phải vừa sức + có đường demo rõ ràng</strong>.
+      </p>
+      <ul class="list">
+        <li><strong>Đề tài tốt</strong>: có nghiệp vụ rõ (quản lý, đặt lịch, bán hàng…), có CRUD, có đăng nhập, có phân quyền.</li>
+        <li><strong>Đề tài nguy hiểm</strong>: yêu cầu mơ hồ, phụ thuộc API khó, “làm cho giống app thật” nhưng không rõ làm phần nào.</li>
+      </ul>
+      <p>
+        Mẹo nhanh: viết ra 10 user story đơn giản (VD: “đăng nhập”, “thêm sản phẩm”, “tìm kiếm”, “xuất hóa đơn”…). Nếu chưa viết nổi 10 cái, đề tài đang mơ hồ.
+      </p>
+
+      <h2>2) Làm nhóm: chia việc theo “tính năng”, đừng chia theo “file”</h2>
+      <p>
+        Sai lầm hay gặp: bạn A làm giao diện, bạn B làm database, bạn C làm backend… đến lúc ghép lại thì vỡ trận.
+        Cách mình thấy ổn hơn là chia theo <strong>tính năng end-to-end</strong>.
+      </p>
+      <ul class="list">
+        <li><strong>Feature 1</strong>: Đăng nhập + phân quyền (UI + API + DB)</li>
+        <li><strong>Feature 2</strong>: Quản lý đối tượng chính (VD: sản phẩm/đơn hàng/sinh viên…)</li>
+        <li><strong>Feature 3</strong>: Báo cáo/Thống kê (nếu có)</li>
+      </ul>
+      <p>
+        Mỗi feature có 1 người “chịu trách nhiệm chính”, nhưng vẫn review chéo để tránh “mỗi người 1 style”.
+      </p>
+
+      <h2>3) GitHub: đừng để tới ngày cuối mới push</h2>
+      <p>
+        Đồ án mà không dùng Git thì vẫn chạy được… nhưng stress sẽ tăng theo cấp số nhân.
+        Tụi mình dùng GitHub theo cách đơn giản:
+      </p>
+      <ul class="list">
+        <li>Tạo repo riêng cho đồ án</li>
+        <li>Mỗi người làm trên branch: <code>feature/login</code>, <code>feature/product</code>…</li>
+        <li>Đặt quy ước commit: <code>feat:</code>, <code>fix:</code>, <code>refactor:</code></li>
+        <li>Gộp code bằng pull request (ít nhất 1 người review)</li>
+      </ul>
+      <p>
+        Nếu chưa quen PR thì tối thiểu cũng: <strong>pull trước khi code</strong> và <strong>push mỗi ngày</strong>.
+      </p>
+
+      <h2>4) Tài liệu &amp; báo cáo: làm song song, đừng “để thầy cô đọc tâm”</h2>
+      <p>
+        Báo cáo không phải để “viết cho có”, mà để giám khảo hiểu bạn đã làm gì.
+        Mình hay chốt cấu trúc báo cáo sớm:
+      </p>
+      <ul class="list">
+        <li><strong>Giới thiệu</strong>: vấn đề + mục tiêu</li>
+        <li><strong>Phân tích yêu cầu</strong>: actor, use case, nghiệp vụ</li>
+        <li><strong>Thiết kế</strong>: ERD, mô hình lớp (nếu có), kiến trúc (MVC…)</li>
+        <li><strong>Triển khai</strong>: công nghệ sử dụng + mô tả tính năng</li>
+        <li><strong>Kiểm thử</strong>: test case cơ bản + kết quả</li>
+        <li><strong>Kết luận</strong>: đã làm được gì + hướng phát triển</li>
+      </ul>
+
+      <h2>5) Demo: luyện trước 10 phút để tránh “màn hình trắng”</h2>
+      <p>
+        Demo đồ án thường hỏng vì những thứ rất… nhỏ:
+      </p>
+      <ul class="list">
+        <li>Quên seed dữ liệu → màn hình trống</li>
+        <li>Máy khác thiếu database/connection string</li>
+        <li>Chạy đúng trên máy bạn, nhưng không chạy trên máy giám khảo</li>
+      </ul>
+      <p>
+        Checklist trước buổi demo:
+      </p>
+      <ul class="list">
+        <li><strong>1 file hướng dẫn chạy</strong>: cài gì, chạy gì, tài khoản demo</li>
+        <li><strong>1 database backup/script</strong> (nếu dùng DB)</li>
+        <li><strong>1 kịch bản demo</strong>: đi theo luồng nghiệp vụ 3–5 phút</li>
+      </ul>
+
+      <h2>6) Bài học lớn nhất: đồ án là bài tập “làm sản phẩm”, không phải “làm code”</h2>
+      <p>
+        Đồ án đầu tay giúp mình hiểu rõ hơn Công nghệ Phần mềm ở chỗ:
+        <strong>quy trình</strong>, <strong>giao tiếp</strong>, <strong>chia việc</strong> và <strong>đảm bảo chất lượng</strong> quan trọng không kém code.
+      </p>
+      <p>
+        Nếu bạn đang chuẩn bị làm đồ án, cứ bắt đầu từ phiên bản nhỏ nhất chạy được.
+        Làm cho xong một luồng hoàn chỉnh trước, rồi hãy “tô màu” dần.
+      </p>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

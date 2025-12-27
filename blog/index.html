@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nguyễn Kha | Blog</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Blog của Nguyễn Kha - ghi chú học tập và chia sẻ về Java, công nghệ phần mềm" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../about.html">About</a>
+        <a class="nav-link" href="../portfolio.html">Portfolio</a>
+        <a class="nav-link" href="../contact.html">Skills</a>
+        <a class="nav-link active" href="./index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Blog</h1>
+    <p class="page-subtitle">Nơi mình ghi lại quá trình học tập Công nghệ Phần mềm, chia sẻ kiến thức lập trình và kinh nghiệm làm đồ án tại HUTECH.</p>
+
+    <section class="post-list">
+      <article class="post-item">
+        <div class="post-meta">27/12/2025 · 5 phút đọc</div>
+        <h2 style="margin:8px 0 6px;">
+          <a href="./posts/bai-viet-dau-tien.html">Lập trình hướng đối tượng (OOP) là gì?</a>
+        </h2>
+        <p class="card-text" style="margin:0;">
+          OOP là nền tảng quan trọng giúp chương trình dễ bảo trì và mở rộng. Mình tóm tắt khái niệm và ví dụ ngắn.
+        </p>
+      </article>
+
+      <article class="post-item">
+        <div class="post-meta">27/12/2025 · 6 phút đọc</div>
+        <h2 style="margin:8px 0 6px;">
+          <a href="./posts/cong-nghe-phan-mem-la-gi.html">Công nghệ Phần mềm là gì mà “học hoài không hết”?</a>
+        </h2>
+        <p class="card-text" style="margin:0;">
+          Bài viết vui vẻ – dễ hiểu: ngành Công nghệ Phần mềm học gì, làm gì, và định hướng cho sinh viên.
+        </p>
+      </article>
+
+      <article class="post-item">
+        <div class="post-meta">27/12/2025 · 7 phút đọc</div>
+        <h2 style="margin:8px 0 6px;">
+          <a href="./posts/lan-dau-lam-do-an-cnpm.html">Lần đầu làm đồ án ngành Công nghệ Phần mềm: mình đã học được gì?</a>
+        </h2>
+        <p class="card-text" style="margin:0;">
+          Chia sẻ kinh nghiệm làm đồ án lần đầu: chọn đề tài, chia việc, dùng GitHub, làm báo cáo và chuẩn bị demo.
+        </p>
+      </article>
+
+      <article class="post-item">
+        <div class="post-meta">27/12/2025 · 8 phút đọc</div>
+        <h2 style="margin:8px 0 6px;">
+          <a href="./posts/loi-thuong-gap-khi-hoc-lap-trinh.html">Tổng hợp lỗi thường gặp khi học lập trình (và cách sửa)</a>
+        </h2>
+        <p class="card-text" style="margin:0;">
+          Kiểu HowKteam: học lan man, chỉ xem video, copy code, sợ debug… và checklist sửa nhanh để tiến bộ đều.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span> &copy; <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted"><a href="../index.html">Về trang Profile</a></span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
