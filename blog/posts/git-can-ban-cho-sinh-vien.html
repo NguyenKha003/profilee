@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Git cơ bản cho sinh viên: đủ dùng để làm đồ án nhóm | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="Git cơ bản dễ hiểu: add/commit/push/pull/branch, quy ước commit và cách làm nhóm để tránh conflict." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">31/12/2025 · Nguyễn Kha</div>
+      <h1>Git cơ bản cho sinh viên: đủ dùng để làm đồ án nhóm</h1>
+
+      <p>
+        Git giúp bạn <strong>lưu lịch sử code</strong> và <strong>làm việc nhóm</strong> an toàn.
+        Nếu đồ án nhóm mà không dùng Git, tới ngày cuối rất dễ "vỡ trận".
+      </p>
+
+      <h2>1) 5 lệnh quan trọng nhất</h2>
+      <ul class="list">
+        <li><code>git status</code>: xem file thay đổi</li>
+        <li><code>git add .</code>: đưa file vào stage</li>
+        <li><code>git commit -m "..."</code>: lưu một mốc</li>
+        <li><code>git push</code>: đẩy lên GitHub</li>
+        <li><code>git pull</code>: kéo code mới về</li>
+      </ul>
+
+      <h2>2) Làm nhóm đúng cách: branch + PR</h2>
+      <ul class="list">
+        <li>Mỗi tính năng làm 1 branch: <code>feature/login</code>, <code>feature/products</code></li>
+        <li>Push branch lên GitHub</li>
+        <li>Tạo Pull Request (PR) vào <code>main</code></li>
+        <li>Review rồi merge</li>
+      </ul>
+
+      <h2>3) Quy ước commit message</h2>
+      <ul class="list">
+        <li><code>feat:</code> thêm tính năng</li>
+        <li><code>fix:</code> sửa lỗi</li>
+        <li><code>docs:</code> sửa README/tài liệu</li>
+      </ul>
+
+      <h2>4) Tránh conflict</h2>
+      <ul class="list">
+        <li>Luôn <strong>pull</strong> trước khi code</li>
+        <li>Không sửa cùng 1 file lớn nếu không phân chia</li>
+        <li>Commit nhỏ và push thường xuyên</li>
+      </ul>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

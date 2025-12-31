@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lập trình mạng là gì? Kiến thức cần biết cho sinh viên | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="Giải thích lập trình mạng dễ hiểu: client-server, HTTP, TCP/UDP, socket, ví dụ ứng dụng thực tế." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">31/12/2025 · Nguyễn Kha</div>
+      <h1>Lập trình mạng là gì? Kiến thức cần biết cho sinh viên</h1>
+
+      <p>
+        <strong>Lập trình mạng</strong> là viết chương trình có thể <strong>gửi/nhận dữ liệu qua mạng</strong>.
+        Ví dụ: chat app, đăng nhập tài khoản, gọi API, game online, hoặc web app (frontend gọi backend).
+      </p>
+
+      <h2>1) Mô hình Client – Server</h2>
+      <ul class="list">
+        <li><strong>Client</strong>: phía người dùng (trình duyệt, app mobile).</li>
+        <li><strong>Server</strong>: nơi xử lý nghiệp vụ, trả dữ liệu (API, database).</li>
+      </ul>
+      <p>
+        Khi bạn mở web, trình duyệt gửi request tới server, server trả response.
+        Đó là lập trình mạng theo kiểu web.
+      </p>
+
+      <h2>2) TCP/UDP (hiểu nhanh)</h2>
+      <ul class="list">
+        <li><strong>TCP</strong>: ưu tiên đúng dữ liệu, đủ gói, đúng thứ tự (ổn định hơn).</li>
+        <li><strong>UDP</strong>: ưu tiên tốc độ, có thể mất gói (hay dùng trong game, streaming).</li>
+      </ul>
+
+      <h2>3) HTTP/HTTPS (thứ bạn gặp hằng ngày)</h2>
+      <p>
+        HTTP là giao thức dùng cho web. Khi bạn gọi API bằng JavaScript (<code>fetch</code>) hoặc backend Java gọi API,
+        thường là HTTP.
+      </p>
+      <ul class="list">
+        <li><strong>GET</strong>: lấy dữ liệu</li>
+        <li><strong>POST</strong>: gửi dữ liệu (tạo mới)</li>
+        <li><strong>PUT/PATCH</strong>: cập nhật</li>
+        <li><strong>DELETE</strong>: xoá</li>
+      </ul>
+
+      <h2>4) Socket là gì?</h2>
+      <p>
+        Socket là “đầu nối” để 2 chương trình nói chuyện qua mạng.
+        Bạn sẽ gặp khi làm chat realtime, game, hoặc bài tập TCP client/server.
+      </p>
+
+      <h2>5) Học theo lộ trình nào?</h2>
+      <ul class="list">
+        <li>Bắt đầu với <strong>HTTP + REST API</strong> (dễ áp dụng cho web/đồ án).</li>
+        <li>Sau đó học <strong>Socket TCP</strong> để hiểu nền tảng.</li>
+        <li>Cuối cùng tìm hiểu realtime (WebSocket) nếu cần.</li>
+      </ul>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

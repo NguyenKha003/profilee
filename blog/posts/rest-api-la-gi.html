@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>REST API là gì? Hiểu nhanh để làm web và đồ án | Nguyễn Kha</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="REST API dễ hiểu: endpoint, method, status code, JSON, ví dụ CRUD và lỗi thường gặp khi gọi API." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">Nguyễn Kha</a>
+      <nav class="nav">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../about.html">About</a>
+        <a class="nav-link" href="../../contact.html">Skills</a>
+        <a class="nav-link active" href="../index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article">
+    <div class="article-card">
+      <div class="post-meta">31/12/2025 · Nguyễn Kha</div>
+      <h1>REST API là gì? Hiểu nhanh để làm web và đồ án</h1>
+
+      <p>
+        <strong>REST API</strong> là cách mà frontend (trình duyệt) và backend (server) giao tiếp với nhau qua HTTP.
+        Nói đơn giản: bạn gọi một đường dẫn (endpoint) và nhận dữ liệu (thường là JSON).
+      </p>
+
+      <h2>1) Endpoint là gì?</h2>
+      <p>
+        Endpoint là URL đại diện cho tài nguyên.
+        Ví dụ:
+      </p>
+      <ul class="list">
+        <li><code>/api/users</code>: danh sách người dùng</li>
+        <li><code>/api/products</code>: danh sách sản phẩm</li>
+      </ul>
+
+      <h2>2) CRUD với REST</h2>
+      <ul class="list">
+        <li><strong>GET</strong> <code>/api/products</code> → lấy danh sách</li>
+        <li><strong>GET</strong> <code>/api/products/1</code> → lấy chi tiết</li>
+        <li><strong>POST</strong> <code>/api/products</code> → tạo mới</li>
+        <li><strong>PUT</strong> <code>/api/products/1</code> → cập nhật</li>
+        <li><strong>DELETE</strong> <code>/api/products/1</code> → xoá</li>
+      </ul>
+
+      <h2>3) Status code quan trọng</h2>
+      <ul class="list">
+        <li><code>200</code>: OK</li>
+        <li><code>201</code>: Created (tạo thành công)</li>
+        <li><code>400</code>: Bad Request (dữ liệu gửi lên sai)</li>
+        <li><code>401</code>: Unauthorized (chưa đăng nhập)</li>
+        <li><code>403</code>: Forbidden (không có quyền)</li>
+        <li><code>404</code>: Not Found</li>
+        <li><code>500</code>: Server Error</li>
+      </ul>
+
+      <h2>4) Ví dụ gọi API bằng JavaScript</h2>
+      <pre class="code"><code>async function loadProducts() {
+  const res = await fetch("/api/products");
+  if (!res.ok) throw new Error("HTTP " + res.status);
+  return await res.json();
+}
+</code></pre>
+
+      <h2>5) Lỗi thường gặp</h2>
+      <ul class="list">
+        <li>Gọi sai URL/endpoint → 404</li>
+        <li>Quên parse JSON → không đọc được dữ liệu</li>
+        <li>Không xử lý <code>res.ok</code> → lỗi khó debug</li>
+      </ul>
+
+      <p style="margin-top:14px;">
+        <a class="button button-ghost" href="../index.html">← Quay lại trang Blog</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nguyễn Kha</span>
+      <span class="muted">Post</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

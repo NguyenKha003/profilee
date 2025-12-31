@@ -14,7 +14,7 @@ Website profile + blog cá nhân (tiếng Việt) phục vụ đồ án: chia s�
 
 ## Cấu trúc thư mục
 - `index.html`: Home/Profile
-- `about.html`, `portfolio.html`, `contact.html`: các trang phụ (Skills nằm ở `contact.html`)
+- `about.html`, `contact.html`: các trang phụ (Skills nằm ở `contact.html`)
 - `styles.css`, `home.css`: giao diện
 - `blog/index.html`: danh sách bài viết
 - `blog/posts/*.html`: bài viết
